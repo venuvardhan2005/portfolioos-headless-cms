@@ -115,11 +115,12 @@ export default function About() {
 
       {/* Bento Grid */}
       <motion.div
+        id="highlights"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-24"
+        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-24 scroll-mt-24"
       >
         {data.highlights?.filter(h => h.visible !== false).map((highlight, idx) => {
           const LucideIcon = (Icons as any)[highlight.icon] || Icons.Award;

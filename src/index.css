@@ -51,6 +51,9 @@
   }
 
   /* Section backgrounds - Softer warm premium color mapping */
+  section, #projects, #certificates, #highlights {
+    scroll-margin-top: 90px;
+  }
   section {
     @apply bg-[#FAFBFC] dark:bg-transparent py-28 border-b border-slate-200/10 dark:border-neutral-900/50;
   }

@@ -6,6 +6,7 @@ import ThemeToggle from './ThemeToggle';
 const NAV_ITEMS = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
+  { name: 'Highlights', href: '#highlights' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
@@ -20,23 +21,23 @@ export default function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith('#')) return;
     e.preventDefault();
+    
+    // Close mobile menu immediately to trigger collapse transition
     setIsOpen(false);
     
     const targetId = href.substring(1);
-    const element = document.getElementById(targetId);
-    if (element) {
-      const offset = 80; // compensator for sticky header
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      console.log(`[debugging] Smooth scrolled to: ${targetId} with offset: ${offset}`);
-    }
+    
+    // Defer scroll animation slightly to wait for menu height collapse and prevent layout jumping
+    setTimeout(() => {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        console.log(`[debugging] Scrolled to target id: ${targetId}`);
+      }
+    }, 150);
   };
 
   useEffect(() => {
