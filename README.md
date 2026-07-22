@@ -1,4 +1,4 @@
-# 🚀 PortfolioOS – Headless Portfolio CMS
+<img width="1600" height="756" alt="WhatsApp Image 2026-07-22 at 6 41 09 PM (1)" src="https://github.com/user-attachments/assets/2fbae359-86f0-4017-a804-2731603d3ba6" /># 🚀 PortfolioOS – Headless Portfolio CMS
 
 > A modern, production-ready Headless Portfolio CMS built with React, TypeScript, Vite, Tailwind CSS, and Supabase.
 
@@ -8,7 +8,7 @@ PortfolioOS enables developers, students, freelancers, and professionals to mana
 
 ## 🌐 Live Demo
 
-🔗 https://ramdas-khara-and-sweets.vercel.app
+🔗 https://portfolioos-headless-cms.vercel.app
 
 ---
 
@@ -127,13 +127,12 @@ src/
 
 ### Public Portfolio
 
-(Add screenshot here)
+<img width="1600" height="743" alt="WhatsApp Image 2026-07-22 at 6 34 22 PM (1)" src="https://github.com/user-attachments/assets/a0cd7d51-9cfa-493a-8016-42c9b265d91a" />
 
 ---
 
 ### Admin Dashboard
-
-(Add screenshot here)
+<img width="1600" height="756" alt="WhatsApp Image 2026-07-22 at 6 41 09 PM (1)" src="https://github.com/user-attachments/assets/5e4f105e-84a8-4586-9521-602a77d29bdd" />
 
 ---
 
@@ -226,7 +225,7 @@ AI Enthusiast
 ## 📬 Contact
 
 Email:
-venuvardhan2005@gmail.com
+venuvardhanp61653@gmail.com
 
 LinkedIn:
 https://www.linkedin.com/in/pvenuvardhanshetty/
@@ -235,7 +234,7 @@ GitHub:
 https://github.com/venuvardhan2005
 
 Portfolio:
-https://your-portfolio-link.vercel.app
+https://portfolioos-headless-cms.vercel.app
 
 ---
 
