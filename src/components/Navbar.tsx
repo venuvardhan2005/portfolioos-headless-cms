@@ -17,6 +17,28 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith('#')) return;
+    e.preventDefault();
+    setIsOpen(false);
+    
+    const targetId = href.substring(1);
+    const element = document.getElementById(targetId);
+    if (element) {
+      const offset = 80; // compensator for sticky header
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      console.log(`[debugging] Smooth scrolled to: ${targetId} with offset: ${offset}`);
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = NAV_ITEMS.map(item => item.href.substring(1));
@@ -45,7 +67,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#home" className="text-xl font-bold font-display tracking-tight bg-gradient-to-r from-indigo-500 to-cyan-500 bg-clip-text text-transparent">
+            <a 
+              href="#home" 
+              onClick={(e) => handleNavClick(e, '#home')}
+              className="text-xl font-bold font-display tracking-tight bg-gradient-to-r from-indigo-500 to-cyan-500 bg-clip-text text-transparent"
+            >
               VV.DEV
             </a>
           </div>
@@ -58,6 +84,7 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className={`relative px-4 py-2 text-sm font-medium font-sans rounded-full transition-all duration-200 ${
                     isActive
                       ? 'text-indigo-600 dark:text-cyan-400 font-semibold'
@@ -82,6 +109,7 @@ export default function Navbar() {
             <ThemeToggle />
             <a
               href="#contact"
+              onClick={(e) => handleNavClick(e, '#contact')}
               className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-full bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-100 transition-colors shadow-sm gap-1 group"
             >
               Hire Me
@@ -117,7 +145,7 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors ${
                     activeSection === item.href.substring(1)
                       ? 'bg-indigo-50 text-indigo-600 dark:bg-neutral-900 dark:text-cyan-400'
