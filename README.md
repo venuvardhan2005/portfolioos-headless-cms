@@ -1,32 +1,244 @@
-# React + TypeScript + Vite
+# 🚀 PortfolioOS – Headless Portfolio CMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> A modern, production-ready Headless Portfolio CMS built with React, TypeScript, Vite, Tailwind CSS, and Supabase.
 
-Currently, two official plugins are available:
+PortfolioOS enables developers, students, freelancers, and professionals to manage their entire portfolio through a beautiful Admin Dashboard without touching the source code.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌐 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 https://your-vercel-link.vercel.app
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## ✨ Features
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+### 🌍 Public Portfolio
+
+- Modern responsive portfolio
+- Dynamic Hero section
+- About section
+- Featured Projects
+- Skills showcase
+- Experience timeline
+- Certificates
+- Resume download
+- Contact section
+- Social links
+- SEO optimized
+- Dark / Light mode
+- Smooth animations
+
+---
+
+### 🛠 Admin Dashboard (CMS)
+
+Manage everything without editing code.
+
+✔ Profile Information
+
+✔ Projects
+
+✔ Skills
+
+✔ Experience
+
+✔ Certificates
+
+✔ Portfolio Highlights
+
+✔ Resume Upload
+
+✔ SEO Settings
+
+✔ Theme Customization
+
+✔ Contact Information
+
+✔ Social Media Links
+
+✔ Analytics Dashboard
+
+✔ System Settings
+
+---
+
+## ⚡ Tech Stack
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+
+### Backend
+
+- Supabase Database
+- Supabase Authentication
+- Supabase Storage
+- Row Level Security (RLS)
+
+### Deployment
+
+- Vercel
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── admin/
+ │    ├── pages/
+ │    ├── services/
+ │    ├── components/
+ │
+ ├── components/
+ ├── context/
+ ├── hooks/
+ ├── lib/
+ ├── pages/
+ ├── services/
+ ├── styles/
+ └── App.tsx
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## 🧩 CMS Modules
+
+- Dashboard
+- Projects
+- Skills
+- Experience
+- Certificates
+- Highlights
+- Resume Manager
+- Messages
+- Analytics
+- Portfolio Settings
+
+---
+
+## 📷 Screenshots
+
+### Public Portfolio
+
+(Add screenshot here)
+
+---
+
+### Admin Dashboard
+
+(Add screenshot here)
+
+---
+
+## 🚀 Getting Started
+
+### Clone Repository
+
+```bash
+git clone https://github.com/venuvardhan2005/portfolioos-headless-cms.git
+```
+
+### Navigate
+
+```bash
+cd portfolioos-headless-cms
+```
+
+### Install
+
+```bash
+npm install
+```
+
+### Configure Environment
+
+Create a `.env` file
+
+```env
+VITE_SUPABASE_URL=YOUR_SUPABASE_URL
+VITE_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+```
+
+### Run
+
+```bash
+npm run dev
+```
+
+---
+
+## 🗄 Database
+
+Supabase is used for:
+
+- Authentication
+- PostgreSQL Database
+- Storage Buckets
+- Row Level Security
+- Real-time Portfolio Updates
+
+---
+
+## 🔒 Security
+
+- Supabase Authentication
+- Row Level Security (RLS)
+- Secure Storage Buckets
+- Protected Admin Routes
+- Environment Variables
+
+---
+
+## 📈 Future Improvements
+
+- Blog CMS
+- Visitor Analytics
+- Contact Inbox
+- Email Notifications
+- AI Content Generator
+- Portfolio Themes
+- Multi-language Support
+- Portfolio Templates
+
+---
+
+## 👨‍💻 Developed By
+
+**P Venu Vardhan Shetty**
+
+Computer Science Engineering Student
+
+Full Stack Developer
+
+AI Enthusiast
+
+📍 Ballari, Karnataka, India
+
+---
+
+## 📬 Contact
+
+Email:
+venuvardhan2005@gmail.com
+
+LinkedIn:
+https://www.linkedin.com/in/pvenuvardhanshetty/
+
+GitHub:
+https://github.com/venuvardhan2005
+
+Portfolio:
+https://your-portfolio-link.vercel.app
+
+---
+
+## ⭐ If you like this project
+
+Give this repository a ⭐ on GitHub.
